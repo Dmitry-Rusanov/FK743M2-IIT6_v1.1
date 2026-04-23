@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma2d.h"
 #include "ltdc.h"
 #include "usb_device.h"
 #include "gpio.h"
@@ -79,7 +80,7 @@ int main(void)
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
- // MPU_Config();
+  MPU_Config();
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -102,6 +103,7 @@ int main(void)
   MX_USB_DEVICE_Init();
   MX_FMC_Init();
   MX_LTDC_Init();
+  MX_DMA2D_Init();
   /* USER CODE BEGIN 2 */
 	HAL_Delay(3000);
 	printf("FK743M2-IIT6 USB CDC ready!\r\n");
@@ -273,7 +275,6 @@ void MPU_Config(void)
   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
 
 }
-
 
 /**
   * @brief  This function is executed in case of error occurrence.
