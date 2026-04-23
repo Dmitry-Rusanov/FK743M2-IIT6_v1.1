@@ -1,0 +1,39 @@
+# --- STM32CubeIDE Build Outputs ---
+# Исключаем папки со скомпилированными файлами (объектные файлы, прошивки)
+Debug/
+Release/
+bin/
+obj/
+
+# --- Исключаем вспомогательные файлы сборки ---
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.o
+*.d
+*.su
+*.cyclomatic
+
+# --- Eclipse / STM32CubeIDE Specific ---
+# Локальные настройки пользователя (размер окон, история и т.д.)
+.settings/
+# Файлы логов и временные данные IDE
+.metadata/
+.launches/
+*.launch
+
+# --- OS Specific ---
+# Системный мусор Windows и macOS
+Thumbs.db
+.DS_Store
+
+# --- Исключаем резервные копии CubeMX ---
+# (CubeMX создает их при перегенерации кода)
+backup/
+
+# --- ЧТО НУЖНО ОСТАВИТЬ (НЕ добавляйте это в игнор) ---
+# .project, .cproject — структура проекта Eclipse
+# .ioc — файл конфигурации CubeMX (КРИТИЧЕСКИ ВАЖНО)
+# Drivers/, Core/, Middlewares/ — ваш исходный код
